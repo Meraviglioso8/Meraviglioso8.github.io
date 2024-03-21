@@ -76,7 +76,7 @@ theme_mode: # [light | dark]
 img_cdn:
 
 # the avatar on sidebar, support local or CORS resources
-avatar: https://www.memeatlas.com/images/pepeThumbnails/pepe-flowers-animals-thumbnail.png
+avatar: https://www.kindpng.com/picc/m/595-5957704_pepe-meme-rarepepe-pepa-cute-retarded-pepe-hd.png
 
 # The URL of the site-wide social preview image used in SEO `og:image` meta tag.
 # It can be overridden by a customized `page.image` in front matter.
