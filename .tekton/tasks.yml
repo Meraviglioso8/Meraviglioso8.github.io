@@ -1,0 +1,40 @@
+apiVersion: tekton.dev/v1beta1
+kind: Task
+metadata:
+  name: lint
+spec:
+  steps:
+    - name: lint
+      image: python:3.10
+      script: |
+        pip install flake8
+        flake8 .
+
+---
+apiVersion: tekton.dev/v1beta1
+kind: Task
+metadata:
+  name: test
+spec:
+  steps:
+    - name: test
+      image: python:3.10
+      script: |
+        pip install nose2
+        nose2
+
+---
+apiVersion: tekton.dev/v1beta1
+kind: Task
+metadata:
+  name: cleanup
+spec:
+  steps:
+    - name: cleanup
+      image: ubuntu:latest
+      script: |
+        echo "Cleaning up workspace..."
+        # Add any cleanup commands here, for example:
+        rm -rf _site
+        rm -rf node_modules
+        rm -rf .cache
